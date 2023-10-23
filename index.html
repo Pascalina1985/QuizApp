@@ -22,8 +22,20 @@
 
     <div class="container">
         <div class="card quiz-card">
-            <img src="./img/Group 5.png" class="card-img-top" alt="...">
-            <div class="card-body">
+            <img id="header-image" src="./img/Group 5.png" class="card-img-top" alt="...">
+            <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                <div id="progress-bar" class="progress-bar" style="width: 100%">25%</div>
+            </div>
+            <div id="end-screen" class="card-body end" style="display: none;">
+                <div class="text-center header">Quiz beendet!!!</div>
+                <div class="text-center">
+                    Du hast <b id="amountOfRightQuestions">X</b> Fragen von <b id="amountOfQuestions">X</b> richtig beantwortet
+                </div>
+                <div class="button-row">
+                    <button onclick="restartGame()" type="button" class="btn btn-primary">Erneut spielen</button>
+                </div>
+            </div>
+            <div id="whole-container" class="card-body">
                 <h5 id="questionText" class="card-title">Frage</h5>
                 <div class="card mb- quiz-answer-card" onclick="answer('answer_1')">
                     <!--ID als Parameter: Klar ist, welcher Button gecklickt wird-->
@@ -48,9 +60,10 @@
                 </div>
                 <div class="question-footer">
                     <span>
-                    <b>1</b> von <b id="all-questions">5</b> Fragen
+                    <b id="right-number">1</b> von <b id="all-questions">5</b> Fragen
                 </span>
-                    <button type="button" class="btn btn-primary">Nächste Frage</button>
+                    <button onclick="nextQuestion()" id="nextButton" type="button" class="btn btn-primary" disabled>Nächste Frage</button>
+                    <!--disabled: Button ist nicht klickbar; ändern in Funktion mit Bedingung-->
                 </div>
             </div>
         </div>

@@ -28,7 +28,7 @@ let questions = [{
         "answer2": "Eine Zeichenkette",
         "answer3": "Eine Art von Schleife",
         "answer4": "Eine Liste von elfenbeinernen Elefanten",
-        "right_answer": 4
+        "right_answer": 2
     },
     {
         "question": "Welche der folgenden Optionen ist keine Programmiersprache?",
