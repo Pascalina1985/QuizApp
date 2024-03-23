@@ -65,7 +65,7 @@ function answer(selection) {
 }
 
 function rightAnswerSelected(selectedQuestionNumber) {
-    return selectedQuestionNumber == question['right_answer'];
+    return selectedQuestionNumber == questions['right_answer'];
 }
 
 function nextQuestion() {
